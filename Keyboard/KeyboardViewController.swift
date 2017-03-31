@@ -5,12 +5,23 @@
 //  Created by 千葉俊輝 on 2017/03/31.
 //  Copyright © 2017年 Toshiki Chiba. All rights reserved.
 //
-
 import UIKit
 
-class KeyboardViewController: UIInputViewController {
+final class KeyboardViewController: UIInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
+    
+    private lazy var inputManager: InputManager = {
+        let i = InputManager()
+        i.delegate = self
+        return i
+    }()
+    
+    private lazy var inputEngine: KanaInputEngine = {
+        let k = KanaInputEngine()
+        k.delegate = self
+        return k
+    }()
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -59,3 +70,19 @@ class KeyboardViewController: UIInputViewController {
     }
 
 }
+
+extension KeyboardViewController: InputManagerDelegate {
+    func inputManager(_ inputManager: InputManager!, didFailWithError error: Error!) {
+        
+    }
+    func inputManager(_ inputManager: InputManager!, didCompleteWithCandidates candidates: [Any]!) {
+        
+    }
+}
+
+extension KeyboardViewController: KeyboardInputEngineDelegate {
+    func keyboardInputEngine(_ engine: KanaInputEngine!, processedText text: String!, displayText: String!) {
+        
+    }
+}
+

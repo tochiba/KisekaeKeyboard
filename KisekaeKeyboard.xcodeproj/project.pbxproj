@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB88ACF31E8EAE68000F2D60 /* InputManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACEF1E8EAE68000F2D60 /* InputManager.mm */; };
+		DB88ACF51E8EAE68000F2D60 /* KanaInputEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACF11E8EAE68000F2D60 /* KanaInputEngine.mm */; };
+		DB88ACF91E8EAEA5000F2D60 /* InputCandidate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACF71E8EAEA5000F2D60 /* InputCandidate.m */; };
 		DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */; };
 		DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76F11E8DE06300FD9DDF /* ViewController.swift */; };
 		DBAA76F51E8DE06300FD9DDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F31E8DE06300FD9DDF /* Main.storyboard */; };
@@ -144,6 +147,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB88ACEC1E8EAE66000F2D60 /* KisekaeKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KisekaeKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB88ACED1E8EAE66000F2D60 /* Keyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keyboard-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB88ACEE1E8EAE68000F2D60 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		DB88ACEF1E8EAE68000F2D60 /* InputManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InputManager.mm; sourceTree = "<group>"; };
+		DB88ACF01E8EAE68000F2D60 /* KanaInputEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KanaInputEngine.h; sourceTree = "<group>"; };
+		DB88ACF11E8EAE68000F2D60 /* KanaInputEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KanaInputEngine.mm; sourceTree = "<group>"; };
+		DB88ACF61E8EAEA5000F2D60 /* InputCandidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCandidate.h; sourceTree = "<group>"; };
+		DB88ACF71E8EAEA5000F2D60 /* InputCandidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCandidate.m; sourceTree = "<group>"; };
 		DBAA76EC1E8DE06300FD9DDF /* KisekaeKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisekaeKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA76F11E8DE06300FD9DDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +379,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB88ACEB1E8EAE27000F2D60 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				DB88ACF61E8EAEA5000F2D60 /* InputCandidate.h */,
+				DB88ACF71E8EAEA5000F2D60 /* InputCandidate.m */,
+				DB88ACEE1E8EAE68000F2D60 /* InputManager.h */,
+				DB88ACEF1E8EAE68000F2D60 /* InputManager.mm */,
+				DB88ACF01E8EAE68000F2D60 /* KanaInputEngine.h */,
+				DB88ACF11E8EAE68000F2D60 /* KanaInputEngine.mm */,
+				DB88ACEC1E8EAE66000F2D60 /* KisekaeKeyboard-Bridging-Header.h */,
+				DB88ACED1E8EAE66000F2D60 /* Keyboard-Bridging-Header.h */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 		DBAA76E31E8DE06200FD9DDF = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +420,7 @@
 		DBAA76EE1E8DE06300FD9DDF /* KisekaeKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				DB88ACEB1E8EAE27000F2D60 /* Lib */,
 				DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */,
 				DBAA76F11E8DE06300FD9DDF /* ViewController.swift */,
 				DBAA76F31E8DE06300FD9DDF /* Main.storyboard */,
@@ -527,6 +554,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		DB88ACFE1E8EBF4E000F2D60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB88AD021E8EBF75000F2D60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		DBAA76EB1E8DE06300FD9DDF /* KisekaeKeyboard */ = {
 			isa = PBXNativeTarget;
@@ -536,6 +580,7 @@
 				DBAA76E91E8DE06300FD9DDF /* Frameworks */,
 				DBAA76EA1E8DE06300FD9DDF /* Resources */,
 				DBAA772C1E8DE07600FD9DDF /* Embed App Extensions */,
+				DB88ACFE1E8EBF4E000F2D60 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -590,6 +635,7 @@
 				DBAA771D1E8DE07600FD9DDF /* Sources */,
 				DBAA771E1E8DE07600FD9DDF /* Frameworks */,
 				DBAA771F1E8DE07600FD9DDF /* Resources */,
+				DB88AD021E8EBF75000F2D60 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -613,6 +659,7 @@
 					DBAA76EB1E8DE06300FD9DDF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AVWWV46Y77;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					DBAA76FF1E8DE06300FD9DDF = {
@@ -630,6 +677,7 @@
 					DBAA77201E8DE07600FD9DDF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AVWWV46Y77;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -719,6 +767,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB88ACF91E8EAEA5000F2D60 /* InputCandidate.m in Sources */,
+				DB88ACF31E8EAE68000F2D60 /* InputManager.mm in Sources */,
+				DB88ACF51E8EAE68000F2D60 /* KanaInputEngine.mm in Sources */,
 				DBAA77241E8DE07600FD9DDF /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -859,11 +910,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AVWWV46Y77;
 				INFOPLIST_FILE = KisekaeKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KisekaeKeyboard/KisekaeKeyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -873,11 +927,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AVWWV46Y77;
 				INFOPLIST_FILE = KisekaeKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KisekaeKeyboard/KisekaeKeyboard-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -943,7 +999,16 @@
 		DBAA772A1E8DE07600FD9DDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AVWWV46Y77;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Mozc-for-iOS/src",
+					"$(PROJECT_DIR)/Mozc-for-iOS/src/third_party/protobuf/src",
+					"$(PROJECT_DIR)/Mozc-for-iOS/src/out_ios/DerivedSources/Release/proto_out",
+					"${PROJECT_DIR}/lib",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -953,6 +1018,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboard.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Keyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -960,7 +1027,16 @@
 		DBAA772B1E8DE07600FD9DDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AVWWV46Y77;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Mozc-for-iOS/src",
+					"$(PROJECT_DIR)/Mozc-for-iOS/src/third_party/protobuf/src",
+					"$(PROJECT_DIR)/Mozc-for-iOS/src/out_ios/DerivedSources/Release/proto_out",
+					"${PROJECT_DIR}/lib",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -970,6 +1046,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboard.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Keyboard-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -993,6 +1070,7 @@
 				DBAA77161E8DE06300FD9DDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBAA77171E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -1001,6 +1079,7 @@
 				DBAA77191E8DE06300FD9DDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBAA771A1E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboardUITests" */ = {
 			isa = XCConfigurationList;
@@ -1009,6 +1088,7 @@
 				DBAA771C1E8DE06300FD9DDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBAA77291E8DE07600FD9DDF /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
 			isa = XCConfigurationList;
@@ -1017,6 +1097,7 @@
 				DBAA772B1E8DE07600FD9DDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
