@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */; };
+		DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76F11E8DE06300FD9DDF /* ViewController.swift */; };
+		DBAA76F51E8DE06300FD9DDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F31E8DE06300FD9DDF /* Main.storyboard */; };
+		DBAA76F71E8DE06300FD9DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F61E8DE06300FD9DDF /* Assets.xcassets */; };
+		DBAA76FA1E8DE06300FD9DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F81E8DE06300FD9DDF /* LaunchScreen.storyboard */; };
+		DBAA77051E8DE06300FD9DDF /* KisekaeKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA77041E8DE06300FD9DDF /* KisekaeKeyboardTests.swift */; };
+		DBAA77101E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA770F1E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBAA77011E8DE06300FD9DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBAA76E41E8DE06200FD9DDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBAA76EB1E8DE06300FD9DDF;
+			remoteInfo = KisekaeKeyboard;
+		};
+		DBAA770C1E8DE06300FD9DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBAA76E41E8DE06200FD9DDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBAA76EB1E8DE06300FD9DDF;
+			remoteInfo = KisekaeKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DBAA76EC1E8DE06300FD9DDF /* KisekaeKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisekaeKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBAA76F11E8DE06300FD9DDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBAA76F41E8DE06300FD9DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBAA76F61E8DE06300FD9DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBAA76F91E8DE06300FD9DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBAA76FB1E8DE06300FD9DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBAA77001E8DE06300FD9DDF /* KisekaeKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KisekaeKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAA77041E8DE06300FD9DDF /* KisekaeKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisekaeKeyboardTests.swift; sourceTree = "<group>"; };
+		DBAA77061E8DE06300FD9DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBAA770B1E8DE06300FD9DDF /* KisekaeKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KisekaeKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAA770F1E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisekaeKeyboardUITests.swift; sourceTree = "<group>"; };
+		DBAA77111E8DE06300FD9DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBAA76E91E8DE06300FD9DDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAA76FD1E8DE06300FD9DDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAA77081E8DE06300FD9DDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBAA76E31E8DE06200FD9DDF = {
+			isa = PBXGroup;
+			children = (
+				DBAA76EE1E8DE06300FD9DDF /* KisekaeKeyboard */,
+				DBAA77031E8DE06300FD9DDF /* KisekaeKeyboardTests */,
+				DBAA770E1E8DE06300FD9DDF /* KisekaeKeyboardUITests */,
+				DBAA76ED1E8DE06300FD9DDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBAA76ED1E8DE06300FD9DDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBAA76EC1E8DE06300FD9DDF /* KisekaeKeyboard.app */,
+				DBAA77001E8DE06300FD9DDF /* KisekaeKeyboardTests.xctest */,
+				DBAA770B1E8DE06300FD9DDF /* KisekaeKeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBAA76EE1E8DE06300FD9DDF /* KisekaeKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */,
+				DBAA76F11E8DE06300FD9DDF /* ViewController.swift */,
+				DBAA76F31E8DE06300FD9DDF /* Main.storyboard */,
+				DBAA76F61E8DE06300FD9DDF /* Assets.xcassets */,
+				DBAA76F81E8DE06300FD9DDF /* LaunchScreen.storyboard */,
+				DBAA76FB1E8DE06300FD9DDF /* Info.plist */,
+			);
+			path = KisekaeKeyboard;
+			sourceTree = "<group>";
+		};
+		DBAA77031E8DE06300FD9DDF /* KisekaeKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBAA77041E8DE06300FD9DDF /* KisekaeKeyboardTests.swift */,
+				DBAA77061E8DE06300FD9DDF /* Info.plist */,
+			);
+			path = KisekaeKeyboardTests;
+			sourceTree = "<group>";
+		};
+		DBAA770E1E8DE06300FD9DDF /* KisekaeKeyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DBAA770F1E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift */,
+				DBAA77111E8DE06300FD9DDF /* Info.plist */,
+			);
+			path = KisekaeKeyboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBAA76EB1E8DE06300FD9DDF /* KisekaeKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAA77141E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboard" */;
+			buildPhases = (
+				DBAA76E81E8DE06300FD9DDF /* Sources */,
+				DBAA76E91E8DE06300FD9DDF /* Frameworks */,
+				DBAA76EA1E8DE06300FD9DDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KisekaeKeyboard;
+			productName = KisekaeKeyboard;
+			productReference = DBAA76EC1E8DE06300FD9DDF /* KisekaeKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBAA76FF1E8DE06300FD9DDF /* KisekaeKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAA77171E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboardTests" */;
+			buildPhases = (
+				DBAA76FC1E8DE06300FD9DDF /* Sources */,
+				DBAA76FD1E8DE06300FD9DDF /* Frameworks */,
+				DBAA76FE1E8DE06300FD9DDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBAA77021E8DE06300FD9DDF /* PBXTargetDependency */,
+			);
+			name = KisekaeKeyboardTests;
+			productName = KisekaeKeyboardTests;
+			productReference = DBAA77001E8DE06300FD9DDF /* KisekaeKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBAA770A1E8DE06300FD9DDF /* KisekaeKeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAA771A1E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboardUITests" */;
+			buildPhases = (
+				DBAA77071E8DE06300FD9DDF /* Sources */,
+				DBAA77081E8DE06300FD9DDF /* Frameworks */,
+				DBAA77091E8DE06300FD9DDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBAA770D1E8DE06300FD9DDF /* PBXTargetDependency */,
+			);
+			name = KisekaeKeyboardUITests;
+			productName = KisekaeKeyboardUITests;
+			productReference = DBAA770B1E8DE06300FD9DDF /* KisekaeKeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBAA76E41E8DE06200FD9DDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Toshiki Chiba";
+				TargetAttributes = {
+					DBAA76EB1E8DE06300FD9DDF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 92CNRAXCN6;
+						ProvisioningStyle = Automatic;
+					};
+					DBAA76FF1E8DE06300FD9DDF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 92CNRAXCN6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DBAA76EB1E8DE06300FD9DDF;
+					};
+					DBAA770A1E8DE06300FD9DDF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 92CNRAXCN6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DBAA76EB1E8DE06300FD9DDF;
+					};
+				};
+			};
+			buildConfigurationList = DBAA76E71E8DE06200FD9DDF /* Build configuration list for PBXProject "KisekaeKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBAA76E31E8DE06200FD9DDF;
+			productRefGroup = DBAA76ED1E8DE06300FD9DDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBAA76EB1E8DE06300FD9DDF /* KisekaeKeyboard */,
+				DBAA76FF1E8DE06300FD9DDF /* KisekaeKeyboardTests */,
+				DBAA770A1E8DE06300FD9DDF /* KisekaeKeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBAA76EA1E8DE06300FD9DDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAA76FA1E8DE06300FD9DDF /* LaunchScreen.storyboard in Resources */,
+				DBAA76F71E8DE06300FD9DDF /* Assets.xcassets in Resources */,
+				DBAA76F51E8DE06300FD9DDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAA76FE1E8DE06300FD9DDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAA77091E8DE06300FD9DDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBAA76E81E8DE06300FD9DDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */,
+				DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAA76FC1E8DE06300FD9DDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAA77051E8DE06300FD9DDF /* KisekaeKeyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBAA77071E8DE06300FD9DDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBAA77101E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBAA77021E8DE06300FD9DDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBAA76EB1E8DE06300FD9DDF /* KisekaeKeyboard */;
+			targetProxy = DBAA77011E8DE06300FD9DDF /* PBXContainerItemProxy */;
+		};
+		DBAA770D1E8DE06300FD9DDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBAA76EB1E8DE06300FD9DDF /* KisekaeKeyboard */;
+			targetProxy = DBAA770C1E8DE06300FD9DDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBAA76F31E8DE06300FD9DDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBAA76F41E8DE06300FD9DDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBAA76F81E8DE06300FD9DDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBAA76F91E8DE06300FD9DDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBAA77121E8DE06300FD9DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBAA77131E8DE06300FD9DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBAA77151E8DE06300FD9DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 92CNRAXCN6;
+				INFOPLIST_FILE = KisekaeKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DBAA77161E8DE06300FD9DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 92CNRAXCN6;
+				INFOPLIST_FILE = KisekaeKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DBAA77181E8DE06300FD9DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 92CNRAXCN6;
+				INFOPLIST_FILE = KisekaeKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KisekaeKeyboard.app/KisekaeKeyboard";
+			};
+			name = Debug;
+		};
+		DBAA77191E8DE06300FD9DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 92CNRAXCN6;
+				INFOPLIST_FILE = KisekaeKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KisekaeKeyboard.app/KisekaeKeyboard";
+			};
+			name = Release;
+		};
+		DBAA771B1E8DE06300FD9DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 92CNRAXCN6;
+				INFOPLIST_FILE = KisekaeKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KisekaeKeyboard;
+			};
+			name = Debug;
+		};
+		DBAA771C1E8DE06300FD9DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 92CNRAXCN6;
+				INFOPLIST_FILE = KisekaeKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kogane.KisekaeKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KisekaeKeyboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBAA76E71E8DE06200FD9DDF /* Build configuration list for PBXProject "KisekaeKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAA77121E8DE06300FD9DDF /* Debug */,
+				DBAA77131E8DE06300FD9DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBAA77141E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAA77151E8DE06300FD9DDF /* Debug */,
+				DBAA77161E8DE06300FD9DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DBAA77171E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAA77181E8DE06300FD9DDF /* Debug */,
+				DBAA77191E8DE06300FD9DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DBAA771A1E8DE06300FD9DDF /* Build configuration list for PBXNativeTarget "KisekaeKeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBAA771B1E8DE06300FD9DDF /* Debug */,
+				DBAA771C1E8DE06300FD9DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBAA76E41E8DE06200FD9DDF /* Project object */;
+}
