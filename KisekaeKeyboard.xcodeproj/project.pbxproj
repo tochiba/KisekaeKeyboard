@@ -10,6 +10,15 @@
 		DB88ACF31E8EAE68000F2D60 /* InputManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACEF1E8EAE68000F2D60 /* InputManager.mm */; };
 		DB88ACF51E8EAE68000F2D60 /* KanaInputEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACF11E8EAE68000F2D60 /* KanaInputEngine.mm */; };
 		DB88ACF91E8EAEA5000F2D60 /* InputCandidate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACF71E8EAEA5000F2D60 /* InputCandidate.m */; };
+		DB88AD071E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */; };
+		DB88AD081E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */; };
+		DB88AD0C1E8FD9ED000F2D60 /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD0B1E8FD9ED000F2D60 /* KeyboardService.swift */; };
+		DB88AD151E8FDEFF000F2D60 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD131E8FDEFF000F2D60 /* KeyboardViewController.swift */; };
+		DB88AD1B1E8FE42F000F2D60 /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB88AD1A1E8FE42F000F2D60 /* Keyboard.storyboard */; };
+		DB88AD1D1E8FEAD5000F2D60 /* CandidateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD1C1E8FEAD5000F2D60 /* CandidateCollectionView.swift */; };
+		DB88AD1F1E8FEB24000F2D60 /* SwipeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */; };
+		DB88AD211E8FF1EA000F2D60 /* CandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */; };
+		DB88AD231E8FF21A000F2D60 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */; };
 		DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */; };
 		DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76F11E8DE06300FD9DDF /* ViewController.swift */; };
 		DBAA76F51E8DE06300FD9DDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F31E8DE06300FD9DDF /* Main.storyboard */; };
@@ -17,7 +26,6 @@
 		DBAA76FA1E8DE06300FD9DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F81E8DE06300FD9DDF /* LaunchScreen.storyboard */; };
 		DBAA77051E8DE06300FD9DDF /* KisekaeKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA77041E8DE06300FD9DDF /* KisekaeKeyboardTests.swift */; };
 		DBAA77101E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA770F1E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift */; };
-		DBAA77241E8DE07600FD9DDF /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA77231E8DE07600FD9DDF /* KeyboardViewController.swift */; };
 		DBAA77281E8DE07600FD9DDF /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBAA77211E8DE07600FD9DDF /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBAA77851E8DE50500FD9DDF /* libbase_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAA772E1E8DE50500FD9DDF /* libbase_core.a */; };
 		DBAA77861E8DE50500FD9DDF /* libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAA772F1E8DE50500FD9DDF /* libbase.a */; };
@@ -155,6 +163,14 @@
 		DB88ACF11E8EAE68000F2D60 /* KanaInputEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KanaInputEngine.mm; sourceTree = "<group>"; };
 		DB88ACF61E8EAEA5000F2D60 /* InputCandidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCandidate.h; sourceTree = "<group>"; };
 		DB88ACF71E8EAEA5000F2D60 /* InputCandidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCandidate.m; sourceTree = "<group>"; };
+		DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardPresenter.swift; sourceTree = "<group>"; };
+		DB88AD0B1E8FD9ED000F2D60 /* KeyboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
+		DB88AD131E8FDEFF000F2D60 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		DB88AD1A1E8FE42F000F2D60 /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
+		DB88AD1C1E8FEAD5000F2D60 /* CandidateCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateCollectionView.swift; sourceTree = "<group>"; };
+		DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCollectionView.swift; sourceTree = "<group>"; };
+		DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateCell.swift; sourceTree = "<group>"; };
+		DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 		DBAA76EC1E8DE06300FD9DDF /* KisekaeKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisekaeKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA76F11E8DE06300FD9DDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +185,6 @@
 		DBAA770F1E8DE06300FD9DDF /* KisekaeKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisekaeKeyboardUITests.swift; sourceTree = "<group>"; };
 		DBAA77111E8DE06300FD9DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBAA77211E8DE07600FD9DDF /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBAA77231E8DE07600FD9DDF /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		DBAA77251E8DE07600FD9DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBAA772E1E8DE50500FD9DDF /* libbase_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbase_core.a; path = "Mozc-for-iOS/src/out_ios/Release-iphoneos/libbase_core.a"; sourceTree = "<group>"; };
 		DBAA772F1E8DE50500FD9DDF /* libbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbase.a; path = "Mozc-for-iOS/src/out_ios/Release-iphoneos/libbase.a"; sourceTree = "<group>"; };
@@ -452,8 +467,15 @@
 		DBAA77221E8DE07600FD9DDF /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DBAA77231E8DE07600FD9DDF /* KeyboardViewController.swift */,
 				DBAA77251E8DE07600FD9DDF /* Info.plist */,
+				DB88AD1A1E8FE42F000F2D60 /* Keyboard.storyboard */,
+				DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */,
+				DB88AD0B1E8FD9ED000F2D60 /* KeyboardService.swift */,
+				DB88AD131E8FDEFF000F2D60 /* KeyboardViewController.swift */,
+				DB88AD1C1E8FEAD5000F2D60 /* CandidateCollectionView.swift */,
+				DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */,
+				DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */,
+				DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -732,6 +754,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB88AD1B1E8FE42F000F2D60 /* Keyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +767,7 @@
 			files = (
 				DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */,
 				DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */,
+				DB88AD071E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,10 +791,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB88AD0C1E8FD9ED000F2D60 /* KeyboardService.swift in Sources */,
+				DB88AD151E8FDEFF000F2D60 /* KeyboardViewController.swift in Sources */,
+				DB88AD231E8FF21A000F2D60 /* KeyboardCell.swift in Sources */,
+				DB88AD1D1E8FEAD5000F2D60 /* CandidateCollectionView.swift in Sources */,
+				DB88AD1F1E8FEB24000F2D60 /* SwipeCollectionView.swift in Sources */,
+				DB88AD081E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */,
 				DB88ACF91E8EAEA5000F2D60 /* InputCandidate.m in Sources */,
+				DB88AD211E8FF1EA000F2D60 /* CandidateCell.swift in Sources */,
 				DB88ACF31E8EAE68000F2D60 /* InputManager.mm in Sources */,
 				DB88ACF51E8EAE68000F2D60 /* KanaInputEngine.mm in Sources */,
-				DBAA77241E8DE07600FD9DDF /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

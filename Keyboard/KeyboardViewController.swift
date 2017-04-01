@@ -8,20 +8,11 @@
 import UIKit
 
 final class KeyboardViewController: UIInputViewController {
-
-    @IBOutlet var nextKeyboardButton: UIButton!
+    @IBOutlet weak var candidateCollectionView: CandidateCollectionView!
+    @IBOutlet weak var swipeCollectionView: SwipeCollectionView!
     
-    private lazy var inputManager: InputManager = {
-        let i = InputManager()
-        i.delegate = self
-        return i
-    }()
-    
-    private lazy var inputEngine: KanaInputEngine = {
-        let k = KanaInputEngine()
-        k.delegate = self
-        return k
-    }()
+    fileprivate let presenter = KeyboardPresenter()
+    fileprivate lazy var service = KeyboardService()
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -33,18 +24,10 @@ final class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         
         // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton(type: .system)
-        
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        service.inputEngine.insertCharacter("あい")
+        let height = candidateCollectionView.height + swipeCollectionView.height
+        swipeCollectionView.isHidden = true
+        setupKeyboardHeight(height: height)
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,31 +41,50 @@ final class KeyboardViewController: UIInputViewController {
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        
-        var textColor: UIColor
-        let proxy = self.textDocumentProxy
-        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-            textColor = UIColor.white
+    }
+    
+    private func setupKeyboardHeight(height: CGFloat) {
+        let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: height)
+        view.addConstraint(heightConstraint)
+    }
+}
+
+extension KeyboardViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+extension KeyboardViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView is CandidateCollectionView {
+            return service.candidateCollectionViewNumberOfItemsInSection()
+        } else if collectionView is SwipeCollectionView {
+            return presenter.SwipeCollectionViewNumberOfItemsInSection()
         } else {
-            textColor = UIColor.black
+            return 0
         }
-        self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-
-}
-
-extension KeyboardViewController: InputManagerDelegate {
-    func inputManager(_ inputManager: InputManager!, didFailWithError error: Error!) {
-        
-    }
-    func inputManager(_ inputManager: InputManager!, didCompleteWithCandidates candidates: [Any]!) {
-        
-    }
-}
-
-extension KeyboardViewController: KeyboardInputEngineDelegate {
-    func keyboardInputEngine(_ engine: KanaInputEngine!, processedText text: String!, displayText: String!) {
-        
+    
+    internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView is CandidateCollectionView {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CandidateCell", for: indexPath) as? CandidateCell {
+                cell.textLabel.text = service.candidateCellText(at: indexPath)
+                return cell
+            }
+        } else if collectionView is SwipeCollectionView {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeyboardCell", for: indexPath) as? KeyboardCell {                
+                return cell
+            }
+        }
+        return UICollectionViewCell()
     }
 }
-
+extension KeyboardViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView is CandidateCollectionView {
+            return service.candidateCellSize(at: indexPath)
+        } else if collectionView is SwipeCollectionView {
+            return collectionView.contentSize
+        }
+        return .zero
+    }
+}

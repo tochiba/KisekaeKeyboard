@@ -75,12 +75,18 @@ using namespace std;
     _proccessedText.string = [NSString stringWithUTF8String:output.c_str()];
     _displayText.string = _proccessedText.copy;
     
+    if (_proccessedText.copy == nil || _displayText.copy == nil) {
+        return;
+    }
     [self.delegate keyboardInputEngine:self processedText:_proccessedText.copy displayText:_displayText.copy];
 }
 
 - (void)backspace
 {
     composer->Backspace();
+    if (_proccessedText.copy == nil || _displayText.copy == nil) {
+        return;
+    }
     [self.delegate keyboardInputEngine:self processedText:_proccessedText.copy displayText:_displayText.copy];
 }
 
@@ -143,7 +149,9 @@ using namespace std;
     } else {
         [_displayText appendString:input];
     }
-    
+    if (_proccessedText.copy == nil || _displayText.copy == nil) {
+        return;
+    }
     [self.delegate keyboardInputEngine:self processedText:_proccessedText.copy displayText:_displayText.copy];
 }
 
