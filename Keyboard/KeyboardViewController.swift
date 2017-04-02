@@ -12,7 +12,6 @@ final class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var swipeCollectionView: SwipeCollectionView!
     
     fileprivate let presenter = KeyboardPresenter()
-    fileprivate lazy var service = KeyboardService()
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -24,7 +23,7 @@ final class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         
         // Perform custom UI setup here
-        service.inputEngine.insertCharacter("あい")
+        presenter.service.inputEngine.insertCharacter("あい")
         let height = candidateCollectionView.height + swipeCollectionView.height
         swipeCollectionView.isHidden = true
         setupKeyboardHeight(height: height)
@@ -56,9 +55,9 @@ extension KeyboardViewController: UICollectionViewDelegate {
 extension KeyboardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView is CandidateCollectionView {
-            return service.candidateCollectionViewNumberOfItemsInSection()
+            return presenter.service.candidateCollectionViewNumberOfItemsInSection()
         } else if collectionView is SwipeCollectionView {
-            return presenter.SwipeCollectionViewNumberOfItemsInSection()
+            return presenter.swipeCollectionViewNumberOfItemsInSection()
         } else {
             return 0
         }
@@ -67,7 +66,7 @@ extension KeyboardViewController: UICollectionViewDataSource {
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView is CandidateCollectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CandidateCell", for: indexPath) as? CandidateCell {
-                cell.textLabel.text = service.candidateCellText(at: indexPath)
+                cell.textLabel.text = presenter.service.candidateCellText(at: indexPath)
                 return cell
             }
         } else if collectionView is SwipeCollectionView {
@@ -81,7 +80,7 @@ extension KeyboardViewController: UICollectionViewDataSource {
 extension KeyboardViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView is CandidateCollectionView {
-            return service.candidateCellSize(at: indexPath)
+            return presenter.service.candidateCellSize(at: indexPath)
         } else if collectionView is SwipeCollectionView {
             return collectionView.contentSize
         }

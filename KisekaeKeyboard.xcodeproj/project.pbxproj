@@ -10,7 +10,6 @@
 		DB88ACF31E8EAE68000F2D60 /* InputManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACEF1E8EAE68000F2D60 /* InputManager.mm */; };
 		DB88ACF51E8EAE68000F2D60 /* KanaInputEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACF11E8EAE68000F2D60 /* KanaInputEngine.mm */; };
 		DB88ACF91E8EAEA5000F2D60 /* InputCandidate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB88ACF71E8EAEA5000F2D60 /* InputCandidate.m */; };
-		DB88AD071E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */; };
 		DB88AD081E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */; };
 		DB88AD0C1E8FD9ED000F2D60 /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD0B1E8FD9ED000F2D60 /* KeyboardService.swift */; };
 		DB88AD151E8FDEFF000F2D60 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD131E8FDEFF000F2D60 /* KeyboardViewController.swift */; };
@@ -767,7 +766,6 @@
 			files = (
 				DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */,
 				DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */,
-				DB88AD071E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
