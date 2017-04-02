@@ -24,13 +24,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ezh-bH-Dua">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h19-Gq-0HJ" userLabel="CandidateBaseView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h19-Gq-0HJ" userLabel="CandidateBaseView" customClass="CandidateBaseView" customModule="Keyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-Yf-Xmh" customClass="CandidateCollectionView" customModule="Keyboard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iaD-TF-F6e">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iaD-TF-F6e">
                                                     <size key="itemSize" width="50" height="50"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,7 +38,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CandidateCell" id="AfZ-1m-OjJ" customClass="CandidateCell" customModule="Keyboard" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="17" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -58,6 +58,11 @@
                                                             <constraint firstItem="hCT-Ao-74n" firstAttribute="leading" secondItem="AfZ-1m-OjJ" secondAttribute="leading" id="rqJ-aU-gDL"/>
                                                             <constraint firstAttribute="bottom" secondItem="hCT-Ao-74n" secondAttribute="bottom" id="tcu-0U-mId"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="textLabel" destination="hCT-Ao-74n" id="Jw1-aX-PzR"/>
                                                         </connections>
@@ -68,16 +73,19 @@
                                                     <outlet property="delegate" destination="q1b-6B-RMN" id="uDq-IS-G7M"/>
                                                 </connections>
                                             </collectionView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpR-bm-n3k" userLabel="OpenBtn">
-                                                <rect key="frame" x="335" y="0.0" width="40" height="30"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpR-bm-n3k" userLabel="OpenBtn">
+                                                <rect key="frame" x="335" y="0.0" width="40" height="40"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Juh-ZT-8Jb"/>
-                                                    <constraint firstAttribute="height" constant="30" id="TSV-g0-sRY"/>
+                                                    <constraint firstAttribute="height" constant="40" id="TSV-g0-sRY"/>
                                                 </constraints>
                                                 <state key="normal" title="∨">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openCloseBtnDidTap:" destination="q1b-6B-RMN" eventType="touchUpInside" id="Hh1-ep-aHw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,7 +100,7 @@
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b5F-57-zxq" customClass="SwipeCollectionView" customModule="Keyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84" width="375" height="216"/>
-                                        <color key="backgroundColor" red="0.72340381145477295" green="0.40502904628184638" blue="0.45167554990146191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="216" id="UJL-Ja-xj7"/>
                                         </constraints>
@@ -110,6 +118,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </view>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60260783450704225" colorSpace="custom" customColorSpace="displayP3"/>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
@@ -118,6 +127,7 @@
                                         </connections>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="b5F-57-zxq" secondAttribute="bottom" id="6VF-Ra-CeP"/>
                                     <constraint firstAttribute="trailing" secondItem="h19-Gq-0HJ" secondAttribute="trailing" id="DGJ-3X-WvS"/>
@@ -128,7 +138,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ezh-bH-Dua" secondAttribute="trailing" id="QGK-9B-xKN"/>
                             <constraint firstItem="ezh-bH-Dua" firstAttribute="top" secondItem="3bX-XW-A1R" secondAttribute="bottom" id="h4A-jH-GUV"/>

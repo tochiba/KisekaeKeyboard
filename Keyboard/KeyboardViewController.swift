@@ -17,16 +17,24 @@ final class KeyboardViewController: UIInputViewController {
         super.updateViewConstraints()
         
         // Add custom view sizing constraints here
+        let height = candidateCollectionView.height + swipeCollectionView.height
+        setupKeyboardHeight(height: height)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Perform custom UI setup here
-        presenter.service.inputEngine.insertCharacter("あい")
-        let height = candidateCollectionView.height + swipeCollectionView.height
-        swipeCollectionView.isHidden = true
-        setupKeyboardHeight(height: height)
+        presenter.service.inputEngine.insertCharacter("かさ")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        swipeCollectionView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,10 +54,50 @@ final class KeyboardViewController: UIInputViewController {
         let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: height)
         view.addConstraint(heightConstraint)
     }
+    
+    private func setupCandidateCollectionViewScrollDirection() {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumLineSpacing = 0.0
+        flowLayout.minimumInteritemSpacing = 0.0
+        flowLayout.sectionInset = .zero
+        flowLayout.scrollDirection = swipeCollectionView.isHidden ? .vertical : .horizontal
+        candidateCollectionView.collectionViewLayout = flowLayout
+    }
+    
+    // MARK: - IBAction
+    @IBAction func openCloseBtnDidTap(_ sender: UIButton) {
+        // tag = 1 -> close, tag = 2 -> open
+        if sender.tag == 1 {
+            sender.tag = 2
+            sender.setTitle("∧", for: .normal)
+            swipeCollectionView.alpha = 1.0
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.swipeCollectionView.alpha = 0.0
+            }, completion: { [weak self] _ in
+                self?.swipeCollectionView.isHidden = true
+                self?.setupCandidateCollectionViewScrollDirection()
+            })
+        } else {
+            sender.tag = 1
+            sender.setTitle("∨", for: .normal)
+            swipeCollectionView.alpha = 0.0
+            swipeCollectionView.isHidden = false
+            setupCandidateCollectionViewScrollDirection()
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.swipeCollectionView.alpha = 1.0
+                }, completion: nil)
+        }
+    }
 }
 
 extension KeyboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView is CandidateCollectionView {
+            let text = presenter.service.candidateCellText(at: indexPath)
+            textDocumentProxy.insertText(text)
+        } else if collectionView is SwipeCollectionView {
+            advanceToNextInputMode()
+        }
     }
 }
 extension KeyboardViewController: UICollectionViewDataSource {
@@ -70,7 +118,8 @@ extension KeyboardViewController: UICollectionViewDataSource {
                 return cell
             }
         } else if collectionView is SwipeCollectionView {
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeyboardCell", for: indexPath) as? KeyboardCell {                
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeyboardCell", for: indexPath) as? KeyboardCell {
+                cell.backgroundColor = UIColor(colorLiteralRed: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
                 return cell
             }
         }
@@ -82,7 +131,7 @@ extension KeyboardViewController: UICollectionViewDelegateFlowLayout {
         if collectionView is CandidateCollectionView {
             return presenter.service.candidateCellSize(at: indexPath)
         } else if collectionView is SwipeCollectionView {
-            return collectionView.contentSize
+            return CGSize(width: view.frame.size.width, height: swipeCollectionView.height)
         }
         return .zero
     }

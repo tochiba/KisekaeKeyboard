@@ -18,6 +18,8 @@
 		DB88AD1F1E8FEB24000F2D60 /* SwipeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */; };
 		DB88AD211E8FF1EA000F2D60 /* CandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */; };
 		DB88AD231E8FF21A000F2D60 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */; };
+		DB88AD251E913BFC000F2D60 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD241E913BFC000F2D60 /* UIView+IBInspectable.swift */; };
+		DB88AD261E913BFC000F2D60 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88AD241E913BFC000F2D60 /* UIView+IBInspectable.swift */; };
 		DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */; };
 		DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76F11E8DE06300FD9DDF /* ViewController.swift */; };
 		DBAA76F51E8DE06300FD9DDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA76F31E8DE06300FD9DDF /* Main.storyboard */; };
@@ -170,6 +172,7 @@
 		DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCollectionView.swift; sourceTree = "<group>"; };
 		DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateCell.swift; sourceTree = "<group>"; };
 		DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
+		DB88AD241E913BFC000F2D60 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		DBAA76EC1E8DE06300FD9DDF /* KisekaeKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisekaeKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA76EF1E8DE06300FD9DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA76F11E8DE06300FD9DDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -441,6 +444,7 @@
 				DBAA76F61E8DE06300FD9DDF /* Assets.xcassets */,
 				DBAA76F81E8DE06300FD9DDF /* LaunchScreen.storyboard */,
 				DBAA76FB1E8DE06300FD9DDF /* Info.plist */,
+				DB88AD241E913BFC000F2D60 /* UIView+IBInspectable.swift */,
 			);
 			path = KisekaeKeyboard;
 			sourceTree = "<group>";
@@ -764,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB88AD251E913BFC000F2D60 /* UIView+IBInspectable.swift in Sources */,
 				DBAA76F21E8DE06300FD9DDF /* ViewController.swift in Sources */,
 				DBAA76F01E8DE06300FD9DDF /* AppDelegate.swift in Sources */,
 			);
@@ -795,6 +800,7 @@
 				DB88AD1D1E8FEAD5000F2D60 /* CandidateCollectionView.swift in Sources */,
 				DB88AD1F1E8FEB24000F2D60 /* SwipeCollectionView.swift in Sources */,
 				DB88AD081E8FD5AC000F2D60 /* KeyboardPresenter.swift in Sources */,
+				DB88AD261E913BFC000F2D60 /* UIView+IBInspectable.swift in Sources */,
 				DB88ACF91E8EAEA5000F2D60 /* InputCandidate.m in Sources */,
 				DB88AD211E8FF1EA000F2D60 /* CandidateCell.swift in Sources */,
 				DB88ACF31E8EAE68000F2D60 /* InputManager.mm in Sources */,

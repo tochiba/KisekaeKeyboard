@@ -41,7 +41,7 @@ final class KeyboardService: NSObject {
             return .zero
         }
         let size = (text as NSString).size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 15)])
-        return CGSize(width: size.width + 10.0, height: 30.0)
+        return CGSize(width: size.width + 16.0, height: 40.0)
     }
 }
 

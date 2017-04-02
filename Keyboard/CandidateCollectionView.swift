@@ -8,9 +8,11 @@
 
 import UIKit
 
+final class CandidateBaseView: UIView {}
+
 final class CandidateCollectionView: UICollectionView {
     var height: CGFloat {
-        return 30.0
+        return 40.0
     }
     /*
     // Only override draw() if you perform custom drawing.
