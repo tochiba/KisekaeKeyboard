@@ -10,7 +10,9 @@ import Foundation
 
 final class KeyboardPresenter {
     fileprivate(set) lazy var service = KeyboardService()
-
+    
+    func keyboardHeight() {}
+    
     func swipeCollectionViewNumberOfItemsInSection() -> Int {
         return 1
     }

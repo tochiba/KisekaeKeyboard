@@ -411,6 +411,49 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
+		DB88AD271E927A84000F2D60 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */,
+				DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		DB88AD281E927A8D000F2D60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB88AD1C1E8FEAD5000F2D60 /* CandidateCollectionView.swift */,
+				DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DB88AD291E927A93000F2D60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB88AD1A1E8FE42F000F2D60 /* Keyboard.storyboard */,
+				DB88AD131E8FDEFF000F2D60 /* KeyboardViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DB88AD2A1E927AA2000F2D60 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		DB88AD2B1E927AD4000F2D60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB88AD0B1E8FD9ED000F2D60 /* KeyboardService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		DBAA76E31E8DE06200FD9DDF = {
 			isa = PBXGroup;
 			children = (
@@ -470,15 +513,12 @@
 		DBAA77221E8DE07600FD9DDF /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				DB88AD2B1E927AD4000F2D60 /* Service */,
+				DB88AD2A1E927AA2000F2D60 /* Presenter */,
+				DB88AD291E927A93000F2D60 /* ViewController */,
+				DB88AD281E927A8D000F2D60 /* View */,
+				DB88AD271E927A84000F2D60 /* Cell */,
 				DBAA77251E8DE07600FD9DDF /* Info.plist */,
-				DB88AD1A1E8FE42F000F2D60 /* Keyboard.storyboard */,
-				DB88AD061E8FD5AC000F2D60 /* KeyboardPresenter.swift */,
-				DB88AD0B1E8FD9ED000F2D60 /* KeyboardService.swift */,
-				DB88AD131E8FDEFF000F2D60 /* KeyboardViewController.swift */,
-				DB88AD1C1E8FEAD5000F2D60 /* CandidateCollectionView.swift */,
-				DB88AD1E1E8FEB24000F2D60 /* SwipeCollectionView.swift */,
-				DB88AD201E8FF1EA000F2D60 /* CandidateCell.swift */,
-				DB88AD221E8FF21A000F2D60 /* KeyboardCell.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
