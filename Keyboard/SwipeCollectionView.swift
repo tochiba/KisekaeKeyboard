@@ -9,7 +9,7 @@
 import UIKit
 
 final class SwipeCollectionView: UICollectionView {
-    var height: CGFloat {
+    static var height: Float {
         return 216.0
     }
     /*

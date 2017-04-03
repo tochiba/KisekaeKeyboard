@@ -46,7 +46,7 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Ao-74n">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -141,9 +141,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ezh-bH-Dua" secondAttribute="trailing" id="QGK-9B-xKN"/>
-                            <constraint firstItem="ezh-bH-Dua" firstAttribute="top" secondItem="3bX-XW-A1R" secondAttribute="bottom" id="h4A-jH-GUV"/>
+                            <constraint firstAttribute="bottom" secondItem="ezh-bH-Dua" secondAttribute="bottom" id="bzN-Ny-tlx"/>
                             <constraint firstItem="ezh-bH-Dua" firstAttribute="leading" secondItem="m8p-Rd-2uv" secondAttribute="leading" id="lP8-Po-DBj"/>
-                            <constraint firstItem="kif-0W-86c" firstAttribute="top" secondItem="ezh-bH-Dua" secondAttribute="bottom" id="mLm-5E-KZ7"/>
+                            <constraint firstItem="ezh-bH-Dua" firstAttribute="top" secondItem="m8p-Rd-2uv" secondAttribute="top" id="v0W-En-Dv4"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -151,6 +151,7 @@
                     <size key="freeformSize" width="375" height="300"/>
                     <connections>
                         <outlet property="candidateCollectionView" destination="8HY-Yf-Xmh" id="Tkx-VK-WbY"/>
+                        <outlet property="openCloseBtn" destination="zpR-bm-n3k" id="LHF-P9-FQM"/>
                         <outlet property="swipeCollectionView" destination="b5F-57-zxq" id="66A-8A-One"/>
                     </connections>
                 </viewController>

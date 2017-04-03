@@ -40,7 +40,7 @@ final class KeyboardService: NSObject {
         if text.isEmpty {
             return .zero
         }
-        let size = (text as NSString).size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 15)])
+        let size = (text as NSString).size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17)])
         return CGSize(width: size.width + 16.0, height: 40.0)
     }
 }

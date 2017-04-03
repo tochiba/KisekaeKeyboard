@@ -11,7 +11,7 @@ import UIKit
 final class CandidateBaseView: UIView {}
 
 final class CandidateCollectionView: UICollectionView {
-    var height: CGFloat {
+    static var height: Float {
         return 40.0
     }
     /*
