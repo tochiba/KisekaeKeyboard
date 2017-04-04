@@ -11,7 +11,7 @@ final class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var candidateCollectionView: CandidateCollectionView!
     @IBOutlet weak var swipeCollectionView: SwipeCollectionView!
     @IBOutlet weak var openCloseBtn: UIButton!
-    @IBOutlet weak var inputLabel: UILabel!
+    @IBOutlet weak var inputBaseView: UIView!
     
     static let screenHeight = Float(UIScreen.main.bounds.height)
     private let heightConstraintIdentifier = "keyboardHeightConstraint"
@@ -95,26 +95,26 @@ final class KeyboardViewController: UIInputViewController {
             sender.setTitle("∨", for: .normal)
             swipeCollectionView.alpha = 0.0
             swipeCollectionView.isHidden = false
-            inputLabel.alpha = 1.0
+            inputBaseView.alpha = 1.0
             setupCandidateCollectionViewScrollDirection()
             presenter.isCandidateOpen = !presenter.isCandidateOpen
             setupKeyboardHeight()
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.swipeCollectionView.alpha = 1.0
-                self?.inputLabel.alpha = 0.0
+                self?.inputBaseView.alpha = 0.0
                 }, completion: { [weak self] _ in
-                    self?.inputLabel.isHidden = true
+                    self?.inputBaseView.isHidden = true
             })
         } else {
             sender.setTitle("∧", for: .normal)
             swipeCollectionView.alpha = 1.0
-            inputLabel.alpha = 0.0
-            inputLabel.isHidden = false
+            inputBaseView.alpha = 0.0
+            inputBaseView.isHidden = false
             presenter.isCandidateOpen = !presenter.isCandidateOpen
             setupKeyboardHeight()
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.swipeCollectionView.alpha = 0.0
-                self?.inputLabel.alpha = 1.0
+                self?.inputBaseView.alpha = 1.0
                 }, completion: { [weak self] _ in
                     self?.swipeCollectionView.isHidden = true
                     self?.setupCandidateCollectionViewScrollDirection()

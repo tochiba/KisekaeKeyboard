@@ -24,16 +24,26 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ezh-bH-Dua">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="てすと" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OF-mY-y9s">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFY-cu-kxd" userLabel="InputBaseView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="てすと" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OF-mY-y9s">
+                                                <rect key="frame" x="10" y="0.0" width="355" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="X48-hi-W4K"/>
+                                            <constraint firstAttribute="trailing" secondItem="0OF-mY-y9s" secondAttribute="trailing" constant="10" id="2Mc-Er-x7E"/>
+                                            <constraint firstItem="0OF-mY-y9s" firstAttribute="top" secondItem="AFY-cu-kxd" secondAttribute="top" id="GhM-QU-7VI"/>
+                                            <constraint firstAttribute="height" constant="40" id="bub-Po-TNa"/>
+                                            <constraint firstAttribute="bottom" secondItem="0OF-mY-y9s" secondAttribute="bottom" id="mGo-Or-frE"/>
+                                            <constraint firstItem="0OF-mY-y9s" firstAttribute="leading" secondItem="AFY-cu-kxd" secondAttribute="leading" constant="10" id="qPa-Fw-KFn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h19-Gq-0HJ" userLabel="CandidateBaseView" customClass="CandidateBaseView" customModule="Keyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="375" height="84"/>
                                         <subviews>
@@ -151,13 +161,12 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="b5F-57-zxq" secondAttribute="bottom" id="6VF-Ra-CeP"/>
                                     <constraint firstAttribute="trailing" secondItem="h19-Gq-0HJ" secondAttribute="trailing" id="DGJ-3X-WvS"/>
+                                    <constraint firstItem="AFY-cu-kxd" firstAttribute="top" secondItem="ezh-bH-Dua" secondAttribute="top" id="Efa-FE-f7j"/>
                                     <constraint firstItem="b5F-57-zxq" firstAttribute="leading" secondItem="ezh-bH-Dua" secondAttribute="leading" id="EnR-Bh-HkX"/>
-                                    <constraint firstItem="h19-Gq-0HJ" firstAttribute="top" secondItem="0OF-mY-y9s" secondAttribute="bottom" id="GyE-iu-fZV"/>
                                     <constraint firstItem="h19-Gq-0HJ" firstAttribute="leading" secondItem="ezh-bH-Dua" secondAttribute="leading" id="IEx-Sw-GzK"/>
-                                    <constraint firstItem="0OF-mY-y9s" firstAttribute="top" secondItem="ezh-bH-Dua" secondAttribute="top" id="VMk-XF-HSv"/>
+                                    <constraint firstItem="AFY-cu-kxd" firstAttribute="leading" secondItem="ezh-bH-Dua" secondAttribute="leading" id="lPU-2T-rXa"/>
                                     <constraint firstAttribute="trailing" secondItem="b5F-57-zxq" secondAttribute="trailing" id="m7E-hj-g4e"/>
-                                    <constraint firstAttribute="trailing" secondItem="0OF-mY-y9s" secondAttribute="trailing" id="u5L-YY-wdt"/>
-                                    <constraint firstItem="0OF-mY-y9s" firstAttribute="leading" secondItem="ezh-bH-Dua" secondAttribute="leading" id="vm2-Dx-hHh"/>
+                                    <constraint firstAttribute="trailing" secondItem="AFY-cu-kxd" secondAttribute="trailing" id="yxS-5H-UTo"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -174,7 +183,7 @@
                     <size key="freeformSize" width="375" height="340"/>
                     <connections>
                         <outlet property="candidateCollectionView" destination="8HY-Yf-Xmh" id="Tkx-VK-WbY"/>
-                        <outlet property="inputLabel" destination="0OF-mY-y9s" id="KmB-o5-YeS"/>
+                        <outlet property="inputBaseView" destination="AFY-cu-kxd" id="hrc-5c-5lG"/>
                         <outlet property="openCloseBtn" destination="zpR-bm-n3k" id="LHF-P9-FQM"/>
                         <outlet property="swipeCollectionView" destination="b5F-57-zxq" id="66A-8A-One"/>
                     </connections>
