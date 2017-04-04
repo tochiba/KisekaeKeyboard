@@ -11,6 +11,7 @@ final class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var candidateCollectionView: CandidateCollectionView!
     @IBOutlet weak var swipeCollectionView: SwipeCollectionView!
     @IBOutlet weak var openCloseBtn: UIButton!
+    @IBOutlet weak var inputLabel: UILabel!
     
     static let screenHeight = Float(UIScreen.main.bounds.height)
     private let heightConstraintIdentifier = "keyboardHeightConstraint"
@@ -90,23 +91,30 @@ final class KeyboardViewController: UIInputViewController {
     // MARK: - IBAction
     @IBAction func openCloseBtnDidTap(_ sender: UIButton) {
         // tag = 1 -> close, tag = 2 -> open
-        if presenter.candidateIsOpen {
+        if presenter.isCandidateOpen {
             sender.setTitle("∨", for: .normal)
             swipeCollectionView.alpha = 0.0
             swipeCollectionView.isHidden = false
+            inputLabel.alpha = 1.0
             setupCandidateCollectionViewScrollDirection()
-            presenter.candidateIsOpen = !presenter.candidateIsOpen
+            presenter.isCandidateOpen = !presenter.isCandidateOpen
             setupKeyboardHeight()
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.swipeCollectionView.alpha = 1.0
-                }, completion: nil)
+                self?.inputLabel.alpha = 0.0
+                }, completion: { [weak self] _ in
+                    self?.inputLabel.isHidden = true
+            })
         } else {
             sender.setTitle("∧", for: .normal)
             swipeCollectionView.alpha = 1.0
-            presenter.candidateIsOpen = !presenter.candidateIsOpen
+            inputLabel.alpha = 0.0
+            inputLabel.isHidden = false
+            presenter.isCandidateOpen = !presenter.isCandidateOpen
             setupKeyboardHeight()
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.swipeCollectionView.alpha = 0.0
+                self?.inputLabel.alpha = 1.0
                 }, completion: { [weak self] _ in
                     self?.swipeCollectionView.isHidden = true
                     self?.setupCandidateCollectionViewScrollDirection()
@@ -118,7 +126,7 @@ final class KeyboardViewController: UIInputViewController {
 extension KeyboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView is CandidateCollectionView {
-            if presenter.candidateIsOpen {
+            if presenter.isCandidateOpen {
                 openCloseBtnDidTap(openCloseBtn)
             }
             let text = presenter.service.candidateCellText(at: indexPath)

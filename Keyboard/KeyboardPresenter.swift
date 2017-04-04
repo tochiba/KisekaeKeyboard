@@ -10,12 +10,12 @@ import Foundation
 
 final class KeyboardPresenter {
     fileprivate(set) lazy var service = KeyboardService()
-    var candidateIsOpen = false
+    var isCandidateOpen = false
     
     func keyboardHeight() -> Float {
         var height = CandidateCollectionView.height + SwipeCollectionView.height
         // TODO: ポートレート&&iPhone判定
-        if candidateIsOpen {
+        if isCandidateOpen {
             height = KeyboardViewController.screenHeight - 20.0
         }
         return height
